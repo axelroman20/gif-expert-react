@@ -1,4 +1,5 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
+
 export const GifItem = ({ title, url }) => {
   return (
     <div className="card">
@@ -6,4 +7,9 @@ export const GifItem = ({ title, url }) => {
       <p>{title}</p>
     </div>
   );
+};
+
+GifItem.prototype = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
